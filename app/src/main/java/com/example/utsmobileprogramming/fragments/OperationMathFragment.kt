@@ -67,7 +67,6 @@ class OperationMathFragment : Fragment() {
     }
 
     private fun checkButton(index: Int) {
-//        buttons[index].setBackgroundColor(Color.parseColor("#CACFEE"))
 
         var largest = hasil[0]
 
@@ -77,20 +76,11 @@ class OperationMathFragment : Fragment() {
         }
 
         if (hasil[index] == largest) {
-//            utils.delay(2000){
-//
-//            }
-//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
             totalSkor++
             utils.addTime()
-//            buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
             startGame()
         } else {
-//            utils.delay(2000) {
-//
-//            }
-//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
-//            buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
+
             startGame()
         }
     }
@@ -106,10 +96,7 @@ class OperationMathFragment : Fragment() {
     }
 
     private fun startGame() {
-//        utils.checkSoalNumber(soal, fragmentTransaction, totalSkor,"operationMath")
-//        utils.delay(1500) {
-//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#CACFEE"))
-//        }
+
         soal++
         views.findViewById<TextView>(R.id.soalKe).text = resources.getString(R.string.soal_ke, soal.toString())
         views.findViewById<TextView>(R.id.skorCIE).text = resources.getString(R.string.skor, totalSkor.toString())

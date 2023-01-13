@@ -71,7 +71,6 @@ class DivisorFragment : Fragment() {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
-//                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
                 startGame()
             }
             firstButtonPressed = false
@@ -79,13 +78,11 @@ class DivisorFragment : Fragment() {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
-//                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
                 startGame()
             }
             firstButtonPressed = true
         }
         if (right == 2) {
-//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
             totalSkor++
             utils.addTime()
             startGame()
@@ -93,10 +90,6 @@ class DivisorFragment : Fragment() {
     }
 
     private fun startGame(){
-//        utils.checkSoalNumber(soal,  fragmentTransaction, totalSkor, "Divisor")
-//        utils.delay(1500) {
-//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#FFCCDC"))
-//        }
         soal++
         right = 0
         firstButtonPressed = false
