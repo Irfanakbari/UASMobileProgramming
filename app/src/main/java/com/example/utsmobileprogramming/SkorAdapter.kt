@@ -1,3 +1,5 @@
+package com.example.utsmobileprogramming
+
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
@@ -5,21 +7,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.utsmobileprogramming.R
 import com.example.utsmobileprogramming.model.LeaderBoard
 import java.text.SimpleDateFormat
 import java.util.*
 
-class SkorAdapter(private val heroes: List<LeaderBoard>) : RecyclerView.Adapter<SkorHolder>() {
+class SkorAdapter(private val skor: List<LeaderBoard>) : RecyclerView.Adapter<SkorHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): SkorHolder {
         return SkorHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.leaderboard_item, viewGroup, false))
     }
 
-    override fun getItemCount(): Int = heroes.size
+//    Hitung jumlah data
+    override fun getItemCount(): Int = skor.size
 
     override fun onBindViewHolder(holder: SkorHolder, position: Int) {
-        holder.bindHero(heroes[position],position)
+        holder.bindHero(skor[position],position)
     }
 }
 

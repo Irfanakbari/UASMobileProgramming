@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Handle double klik back
         var backPressedOnce = false
         val handler = Handler(Looper.getMainLooper())
@@ -24,7 +25,7 @@ abstract class BaseActivity : AppCompatActivity() {
                     return
                 }
                 backPressedOnce = true
-                Toast.makeText(this@BaseActivity, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BaseActivity, "Klik sekali lagi untuk Exit", Toast.LENGTH_SHORT).show()
                 handler.postDelayed({ backPressedOnce = false }, 2000)
             }
         }

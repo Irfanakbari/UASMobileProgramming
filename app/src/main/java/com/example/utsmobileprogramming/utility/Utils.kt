@@ -43,7 +43,7 @@ class Utils {
         progress.max = newTime
         Log.d("Time", newTime.toString())
         timer.cancel()
-        timer = object : CountDownTimer((newTime * 1000).toLong(), 1000) {
+        timer = object : CountDownTimer(((newTime * 1000).toLong()), 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 progress.progress = (millisUntilFinished / 1000).toInt()
                 current = (millisUntilFinished / 1000).toInt()

@@ -67,20 +67,20 @@ class DivisorFragment : Fragment() {
 
     private fun checkButton(button: Button) {
         button.setBackgroundColor(Color.parseColor("#FFCCDC"))
-        if (firstButtonPressed) {
+        firstButtonPressed = if (firstButtonPressed) {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
                 startGame()
             }
-            firstButtonPressed = false
+            false
         } else {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
                 startGame()
             }
-            firstButtonPressed = true
+            true
         }
         if (right == 2) {
             totalSkor++

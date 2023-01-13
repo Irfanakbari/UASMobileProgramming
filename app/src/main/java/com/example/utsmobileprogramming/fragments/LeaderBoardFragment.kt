@@ -1,6 +1,6 @@
 package com.example.utsmobileprogramming.fragments
 
-import SkorAdapter
+import com.example.utsmobileprogramming.SkorAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -42,7 +42,6 @@ class LeaderBoardFragment : Fragment() {
                     layoutManager = LinearLayoutManager(context)
                     adapter = heroesAdapter
                 }
-                // use the querySnapshot
             }
         }
     }
