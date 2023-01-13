@@ -71,7 +71,7 @@ class DivisorFragment : Fragment() {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
-                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
+//                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
                 startGame()
             }
             firstButtonPressed = false
@@ -79,23 +79,24 @@ class DivisorFragment : Fragment() {
             if (button.text.toString().toInt() % pembagi == 0) {
                 right++
             } else {
-                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
+//                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
                 startGame()
             }
             firstButtonPressed = true
         }
         if (right == 2) {
-            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
+//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
             totalSkor++
+            utils.addTime()
             startGame()
         }
     }
 
     private fun startGame(){
-        utils.checkSoalNumber(soal,  fragmentTransaction, totalSkor, "Divisor")
-        utils.delay(1500) {
-            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#FFCCDC"))
-        }
+//        utils.checkSoalNumber(soal,  fragmentTransaction, totalSkor, "Divisor")
+//        utils.delay(1500) {
+//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#FFCCDC"))
+//        }
         soal++
         right = 0
         firstButtonPressed = false
@@ -103,7 +104,16 @@ class DivisorFragment : Fragment() {
         views.findViewById<TextView>(R.id.skorCIE).text = resources.getString(R.string.skor, totalSkor.toString())
         generateSoal()
         generateButtonText()
-        utils.startTimer()
+    }
+
+    private fun endGame(){
+        val bundle = Bundle()
+        val skorFragment = SkorFragment()
+        bundle.putInt("skor", totalSkor)
+        bundle.putString("thisFragment", "Divisor")
+        skorFragment.arguments = bundle
+        fragmentTransaction.replace(R.id.gameContainer, skorFragment)
+        fragmentTransaction.commit()
     }
 
     override fun onCreateView(
@@ -113,7 +123,8 @@ class DivisorFragment : Fragment() {
         // Inflate the layout for this fragment
         views = inflater.inflate(R.layout.fragment_divisor, container, false)
         fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()!!
-        utils.timerHandler(views.findViewById(R.id.progressBar),6000, ::startGame)
+        utils.timerHandler(views.findViewById(R.id.progressBar),10000, ::endGame)
+        utils.startTimer()
         buttons = arrayOf(
             views.findViewById(R.id.buttonA),
             views.findViewById(R.id.buttonB),

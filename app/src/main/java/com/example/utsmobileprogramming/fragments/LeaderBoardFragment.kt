@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.utsmobileprogramming.R
 import com.example.utsmobileprogramming.model.LeaderBoard
 import com.example.utsmobileprogramming.utility.FirebaseService
+import com.google.firebase.Timestamp
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -30,7 +31,7 @@ class LeaderBoardFragment : Fragment() {
                 listHeroes.add(
                     LeaderBoard(
                         uid = document.id,
-                        time = document.data?.get("time"),
+                        time = document.data?.get("time") as Timestamp?,
                         skor = document.data?.get("skor")
                     )
                 )

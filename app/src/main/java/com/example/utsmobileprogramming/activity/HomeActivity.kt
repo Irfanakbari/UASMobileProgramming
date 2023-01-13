@@ -1,12 +1,12 @@
-package com.example.utsmobileprogramming
+package com.example.utsmobileprogramming.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.utsmobileprogramming.utility.FirebaseService
+import com.example.utsmobileprogramming.BaseActivity
+import com.example.utsmobileprogramming.R
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.random.Random
 
 
 class HomeActivity : BaseActivity() {
@@ -22,6 +22,7 @@ class HomeActivity : BaseActivity() {
         val callItEvenButton = findViewById<Button>(R.id.callItEven)
         val credit = findViewById<Button>(R.id.credit)
         val usernameText = findViewById<TextView>(R.id.userLogin)
+        val signOut = findViewById<TextView>(R.id.signout)
 
         usernameText.text = username
 
@@ -41,21 +42,17 @@ class HomeActivity : BaseActivity() {
             startActivity(intent)
         }
         credit.setOnClickListener {
-//            FirebaseAuth.getInstance().signOut()
-//            recreate()
-            val r = Random.nextInt(1,100)
-            FirebaseService.saveSkor(r,"Divisor")
-
-
-            // To show the dialog fragment
-//            val fragment = UsernameModal()
-//            fragment.show(supportFragmentManager, "username_dial")
+            startActivity(Intent(this, CreditActivity::class.java))
+        }
+        signOut.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            recreate()
         }
     }
     override fun onStart() {
         super.onStart()
         if (auth == null){
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

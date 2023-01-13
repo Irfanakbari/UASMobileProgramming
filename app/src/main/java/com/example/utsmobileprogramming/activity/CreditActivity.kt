@@ -1,7 +1,8 @@
-package com.example.utsmobileprogramming
+package com.example.utsmobileprogramming.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.utsmobileprogramming.R
 
 class CreditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,6 +1,8 @@
-package com.example.utsmobileprogramming
+package com.example.utsmobileprogramming.activity
 
 import android.os.Bundle
+import com.example.utsmobileprogramming.BaseActivity
+import com.example.utsmobileprogramming.R
 import com.example.utsmobileprogramming.fragments.CallItEvenFragment
 import com.example.utsmobileprogramming.fragments.DivisorFragment
 import com.example.utsmobileprogramming.fragments.OperationMathFragment

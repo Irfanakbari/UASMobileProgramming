@@ -1,14 +1,13 @@
 package com.example.utsmobileprogramming.fragments
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.utsmobileprogramming.R
 import com.example.utsmobileprogramming.utility.Utils
@@ -68,7 +67,7 @@ class OperationMathFragment : Fragment() {
     }
 
     private fun checkButton(index: Int) {
-        buttons[index].setBackgroundColor(Color.parseColor("#CACFEE"))
+//        buttons[index].setBackgroundColor(Color.parseColor("#CACFEE"))
 
         var largest = hasil[0]
 
@@ -78,32 +77,45 @@ class OperationMathFragment : Fragment() {
         }
 
         if (hasil[index] == largest) {
-            utils.delay(2000){
-                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
-                totalSkor++
-                buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
-                startGame()
-            }
+//            utils.delay(2000){
+//
+//            }
+//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.GREEN)
+            totalSkor++
+            utils.addTime()
+//            buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
+            startGame()
         } else {
-            utils.delay(2000) {
-                views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
-                buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
-                startGame()
-            }
+//            utils.delay(2000) {
+//
+//            }
+//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.RED)
+//            buttons[index].setBackgroundColor(Color.parseColor("#565B7B"))
+            startGame()
         }
     }
 
+    private fun endGame(){
+        val bundle = Bundle()
+        val skorFragment = SkorFragment()
+        bundle.putInt("skor", totalSkor)
+        bundle.putString("thisFragment", "operationMath")
+        skorFragment.arguments = bundle
+        fragmentTransaction.replace(R.id.gameContainer, skorFragment)
+        fragmentTransaction.commit()
+    }
+
     private fun startGame() {
-        utils.checkSoalNumber(soal, fragmentTransaction, totalSkor,"operationMath")
-        utils.delay(1500) {
-            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#CACFEE"))
-        }
+//        utils.checkSoalNumber(soal, fragmentTransaction, totalSkor,"operationMath")
+//        utils.delay(1500) {
+//            views.findViewById<TextView>(R.id.skorCIE).setBackgroundColor(Color.parseColor("#CACFEE"))
+//        }
         soal++
         views.findViewById<TextView>(R.id.soalKe).text = resources.getString(R.string.soal_ke, soal.toString())
         views.findViewById<TextView>(R.id.skorCIE).text = resources.getString(R.string.skor, totalSkor.toString())
         generateSoal()
         generateButtonText()
-        utils.startTimer()
+
     }
 
     override fun onCreateView(
@@ -112,7 +124,8 @@ class OperationMathFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         views = inflater.inflate(R.layout.fragment_operation_math, container, false)
-        utils.timerHandler(views.findViewById(R.id.progressBar), 10000, ::startGame)
+        utils.timerHandler(views.findViewById(R.id.progressBar), 10000, ::endGame)
+        utils.startTimer()
         fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()!!
         buttons = arrayOf(
                 views.findViewById(R.id.tombolA),

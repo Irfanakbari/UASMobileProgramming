@@ -1,8 +1,10 @@
-package com.example.utsmobileprogramming
+package com.example.utsmobileprogramming.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import com.example.utsmobileprogramming.BaseActivity
+import com.example.utsmobileprogramming.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.ErrorCodes
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
@@ -59,7 +61,7 @@ class LoginActivity : BaseActivity()  {
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
             // Pindah ke MainActivity
-            val intent = Intent(this,HomeActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         } else {
