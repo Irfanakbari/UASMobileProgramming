@@ -39,7 +39,7 @@ class Utils {
     }
 
     fun addTime() {
-        val newTime = current + 5
+        val newTime = current + 3
         progress.max = newTime
         Log.d("Time", newTime.toString())
         timer.cancel()
