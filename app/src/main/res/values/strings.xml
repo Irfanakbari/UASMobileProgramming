@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Elrond MathGame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="divisor">Divisor</string>
+    <string name="skor_anda_adalah">Skor Anda Adalah:</string>
+    <string name="soal_ke">Soal Ke: %1$s</string>
+    <string name="skor">Skor: %1$s</string>
+    <string name="back_menu_alert">Klik Sekali Lagi Untuk Kembali ke Menu Utama</string>
+    <!--    OPM -->
+    <string name="penjumlahan">%1$s + %2$s</string>
+    <string name="pengurangan">%1$s - %2$s</string>
+    <!--    CIE -->
+    <string name="cie_angka_genap_dimana">Angka genapnya\nada dimana ya..</string>
+    <string name="cie_ingat_genap">Ingat\nAngka Genapnya!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="desc_google_icon">Google Logo</string>
+    <string name="title_text">Login</string>
+
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signed_in">Signed in</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
+    <string name="signed_in_err">"Error: please check logs."</string>
+    <string name="error_null_person">
+        Error: Plus.PeopleApi.getCurrentPerson returned null. Ensure that the Google+ API is
+        enabled for your project, you have a properly configured google-services.json file
+        and that your device has an internet connection.
+    </string>
+
+    <!-- Button labels -->
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="refresh_token">Get Fresh Token</string>
+    <string name="modal_username">Username</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="title_game">ELROND</string>
+</resources>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.DivisorFragment"
+             android:background="@drawable/divisor">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:background="#FFCCDC"
+            android:progressBackgroundTint="#760D2E"
+            android:max="6"
+            android:progressTint="#760D2E"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="292dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_weight="1">
+
+                <TextView
+                        android:text="SOAL : 1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/soalKe"
+                        android:background="#FFCCDC"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+                <ImageButton
+                        android:src="@drawable/ic_baseline_home_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="20dp"
+                        android:backgroundTint="#FFCCDC"/>
+
+                <TextView
+                        android:text="SKOR : X"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/skorCIE"
+                        android:background="#FFCCDC"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="132dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <TextView
+                    android:text="6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pembagi"
+                    android:autoText="true"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:textColor="#760D2E"
+                    android:fontFamily="@font/poppins_med"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:text="24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/buttonA"
+                        android:layout_weight="1"
+                        android:backgroundTint="#760D2E"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFFFF"
+                        app:rippleColor="#FFCCDC"/>
+
+                <Space
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                <Button
+                        android:text="19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/buttonB"
+                        android:layout_weight="1"
+                        app:rippleColor="#FFCCDC"
+                        android:backgroundTint="#760D2E"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp">
+
+                <Button
+                        android:text="21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/buttonC"
+                        android:layout_weight="1"
+                        app:rippleColor="#FFCCDC"
+                        android:backgroundTint="#760D2E"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFFFF"/>
+
+                <Space
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                <Button
+                        android:text="18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/buttonD"
+                        android:layout_weight="1"
+                        app:rippleColor="#FFCCDC"
+                        android:backgroundTint="#760D2E"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFFFF"/>
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"/>
+
+            <TextView
+                    android:text="DIVISOR"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:gravity="center"
+                    android:background="#FFCCDC"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="14sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

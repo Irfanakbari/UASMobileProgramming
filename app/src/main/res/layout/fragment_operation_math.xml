@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.OperationMathFragment"
+             android:background="@drawable/operation">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:id="@+id/progressBar"
+            android:background="#CACFEE"
+            android:progressBackgroundTint="#565B7B"
+            android:max="10"
+            android:progressTint="#760D2E"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="292dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_weight="1">
+
+                <TextView
+                        android:text="SOAL : 1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/soalKe"
+                        android:background="#CACFEE"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+                <ImageButton
+                        android:src="@drawable/ic_baseline_home_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="20dp"
+                        android:backgroundTint="#CACFEE"/>
+
+                <TextView
+                        android:text="SKOR : X"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/skorCIE"
+                        android:background="#CACFEE"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="132dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <TextView
+                    android:text="Pilih hasil yang paling besar"
+                    android:layout_width="223dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pembagi"
+                    android:autoText="true"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#565B7B"
+                    android:fontFamily="@font/poppins_med"/>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"/>
+
+            <Button
+                    android:text="20 + 5"
+                    android:layout_width="239dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/tombolA"
+                    android:layout_weight="1"
+                    android:backgroundTint="#565B7B"
+                    android:fontFamily="@font/poppins_med"
+                    android:textSize="26sp"
+                    android:textColor="#FFFFFF"
+                    app:rippleColor="#CACFEE"/>
+
+            <Button
+                    android:text="12 + 10"
+                    android:layout_width="239dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/tombolB"
+                    android:layout_weight="1"
+                    android:backgroundTint="#565B7B"
+                    android:fontFamily="@font/poppins_med"
+                    android:textSize="26sp"
+                    app:rippleColor="#CACFEE"
+                    android:textColor="#FFFFFF"/>
+
+            <Button
+                    android:text="50 - 30"
+                    android:layout_width="239dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/tombolC"
+                    android:layout_weight="1"
+                    android:backgroundTint="#565B7B"
+                    android:fontFamily="@font/poppins_med"
+                    android:textSize="26sp"
+                    android:textColor="#FFFFFF"
+                    app:rippleColor="#CACFEE"/>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"/>
+
+            <TextView
+                    android:text="OPERATION MATH"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:gravity="center"
+                    android:background="#CACFEE"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="14sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

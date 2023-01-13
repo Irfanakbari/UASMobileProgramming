@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.CallItEvenFragment"
+             android:background="@drawable/cie">
+
+    <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:id="@+id/progressBar"
+            android:background="#FFCCDC"
+            android:progressBackgroundTint="#E45454"
+            android:max="8"
+            android:progressTint="#760D2E"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="292dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_weight="1">
+
+                <TextView
+                        android:text="SOAL : 1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/soalKe"
+                        android:background="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+                <ImageButton
+                        android:src="@drawable/ic_baseline_home_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="20dp"
+                        android:backgroundTint="#FFCDCD"/>
+
+                <TextView
+                        android:text="SKOR : X"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/skorCIE"
+                        android:background="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:paddingHorizontal="15dp"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingVertical="8dp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="132dp"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <TextView
+                    android:text="@string/cie_ingat_genap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pembagi"
+                    android:autoText="true"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#E45454"
+                    android:fontFamily="@font/poppins_med"/>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionA"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        app:rippleColor="#E45454"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionB"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionC"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionD"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        app:rippleColor="#E45454"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionE"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionF"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionG"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"
+                        app:rippleColor="#E45454"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionH"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+                <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:id="@+id/optionI"
+                        android:layout_weight="1"
+                        app:rippleColor="#E45454"
+                        android:backgroundTint="#FFCDCD"
+                        android:fontFamily="@font/poppins_med"
+                        android:textSize="28sp"
+                        android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"/>
+
+            <TextView
+                    android:text="CALL IT EVEN"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:gravity="center"
+                    android:background="#FFCDCD"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="14sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

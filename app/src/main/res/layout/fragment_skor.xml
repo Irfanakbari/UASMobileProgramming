@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.SkorFragment"
+             android:background="@drawable/bg">
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        <TextView
+                android:text="Skor Anda Adalah :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:id="@+id/textView2"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"/>
+
+        <TextView
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_med"
+                android:id="@+id/userLogin"
+                android:gravity="center"
+                android:textSize="48sp"
+                android:textColor="#FFFFFF"/>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="82dp"/>
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFE0E0"
+            android:fontFamily="@font/poppins_med"
+            android:text="Main Lagi"
+            android:textColor="#000000"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <Button
+            android:id="@+id/skorboard"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFE0E0"
+            android:fontFamily="@font/poppins_med"
+            android:text="PAPAN SKOR"
+            android:textColor="#000000"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        <Button
+                android:text="Pilih Game"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pilihGame"
+                android:backgroundTint="#FFE0E0"
+                android:fontFamily="@font/poppins_med"
+                android:textColor="#000000"/>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        <Button
+                android:text="Exit"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/exit"
+                android:backgroundTint="#FFE0E0"
+                android:fontFamily="@font/poppins_med"
+                android:textColor="#000000"/>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/main_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/blue_grey_700"
+              android:orientation="vertical"
+              android:weightSum="4"
+              tools:context=".LoginActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" android:background="@drawable/bg"
+            android:outlineAmbientShadowColor="#289476">
+
+        <TextView
+                android:text="ELROND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_med"
+                android:id="@+id/skorAkhir2"
+                android:gravity="center|center_horizontal"
+                android:textSize="48sp"
+                android:textColor="#FFFFFF"/>
+        <TextView
+                android:text="Kuis Matematika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_reg"
+                android:id="@+id/textView5"
+                android:gravity="center|center_horizontal"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"/>
+        <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_text"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"/>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="90dp"/>
+        <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="275dp"
+                android:layout_height="65dp"
+                android:visibility="visible"
+                app:colorScheme="dark" android:pointerIcon="arrow" app:buttonSize="wide"
+        >
+        </com.google.android.gms.common.SignInButton>
+
+    </LinearLayout>
+
+
+</LinearLayout>
