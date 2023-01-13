@@ -41,7 +41,7 @@ class DivisorFragment : Fragment() {
         views.findViewById<TextView>(R.id.pembagi).text = pembagi.toString()
 
 //        Generate Pilihan
-        for (i in 0..2){
+        for (i in 0..1){
             do {
                 temp = (7..50).random()
             } while (temp % pembagi == 0 || arrayOption.contains(temp))
@@ -49,7 +49,7 @@ class DivisorFragment : Fragment() {
         }
 
 //        Generate Jawaban
-        for (i in 0..2){
+        for (i in 0..1){
             do {
                 temp = (7..50).random()
             } while (temp % pembagi != 0 || arrayOption.contains(temp))
